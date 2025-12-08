@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShelfSync.Mvc", "ShelfSync.Mvc\ShelfSync.Mvc.csproj", "{D79D5D16-869E-8A45-676A-210E4EB7BBD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShelfSync.Test", "ShelfSync.Test\ShelfSync.Test.csproj", "{25D057E0-A68B-4A3D-9738-EFF9D107A082}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D79D5D16-869E-8A45-676A-210E4EB7BBD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D79D5D16-869E-8A45-676A-210E4EB7BBD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D79D5D16-869E-8A45-676A-210E4EB7BBD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D79D5D16-869E-8A45-676A-210E4EB7BBD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25D057E0-A68B-4A3D-9738-EFF9D107A082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25D057E0-A68B-4A3D-9738-EFF9D107A082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25D057E0-A68B-4A3D-9738-EFF9D107A082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25D057E0-A68B-4A3D-9738-EFF9D107A082}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA133D4B-71D2-4422-BB8D-8EF506CD70E3}
+	EndGlobalSection
+EndGlobal
