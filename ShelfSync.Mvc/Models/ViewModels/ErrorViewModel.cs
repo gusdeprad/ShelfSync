@@ -1,4 +1,4 @@
-namespace ShelfSync.Mvc.Models
+namespace ShelfSync.Mvc.Models.ViewModels
 {
     public class ErrorViewModel
     {

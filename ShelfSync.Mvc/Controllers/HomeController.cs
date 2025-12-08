@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ShelfSync.Mvc.Models;
+using ShelfSync.Mvc.Models.ViewModels;
 
 namespace ShelfSync.Mvc.Controllers
 {
