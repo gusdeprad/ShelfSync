@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace ShelfSync.Mvc.Models.ViewModels
@@ -13,5 +11,7 @@ namespace ShelfSync.Mvc.Models.ViewModels
         public string Name { get; set; } = null!;
 
         public List<Guid> BookIds { get; set; } = new();
+
+        public List<BookViewModel> Books { get; set; } = new();
     }
 }

@@ -1,0 +1,14 @@
+@model ShelfSync.Mvc.Models.ViewModels.BookViewModel
+
+@{
+    ViewData["Title"] = "Book Details";
+}
+
+<h1>@Model.Title</h1>
+
+<p><strong>Authors:</strong> @(string.Join(", ", Model.Authors.Select(a => a.Name)))</p>
+
+<p>
+    <a class="btn btn-secondary" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+    <a class="btn btn-primary" asp-action="Index">Back to list</a>
+</p>

@@ -1,0 +1,35 @@
+@model ShelfSync.Mvc.Models.ViewModels.BookViewModel
+@{
+    ViewData["Title"] = "Create Book";
+    var allAuthors = ViewData["Authors"] as List<ShelfSync.Mvc.Models.Entities.Author> ?? new List<ShelfSync.Mvc.Models.Entities.Author>();
+}
+
+<h1>Create Book</h1>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Authors</label>
+        <div>
+        @foreach (var a in allAuthors)
+        {
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="AuthorIds" value="@a.Id" id="author_@a.Id" />
+                <label class="form-check-label" for="author_@a.Id">@a.Name</label>
+            </div>
+        }
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
