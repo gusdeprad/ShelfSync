@@ -56,7 +56,7 @@ namespace ShelfSync.Mvc.Controllers
                 return View(vm);
             }
 
-            var bookIds = vm.BookIds ?? new List<Guid>();
+            var bookIds = vm.BookIds;
             var books = bookIds.Any()
                 ? await _db.Books.Where(b => bookIds.Contains(b.Id)).ToListAsync()
                 : new List<Book>();
@@ -108,7 +108,7 @@ namespace ShelfSync.Mvc.Controllers
             author.Name = vm.Name;
 
             author.Books.Clear();
-            var bookIds = vm.BookIds ?? new List<Guid>();
+            var bookIds = vm.BookIds;
             if (bookIds.Any())
             {
                 var selectedBooks = await _db.Books.Where(b => bookIds.Contains(b.Id)).ToListAsync();

@@ -56,7 +56,7 @@ namespace ShelfSync.Mvc.Controllers
                 return View(vm);
             }
 
-            var authorIds = vm.AuthorIds ?? new List<Guid>();
+            var authorIds = vm.AuthorIds;
             var authors = authorIds.Any()
                 ? await _db.Authors.Where(a => authorIds.Contains(a.Id)).ToListAsync()
                 : new List<Author>();
@@ -108,7 +108,7 @@ namespace ShelfSync.Mvc.Controllers
             book.Title = vm.Title;
 
             book.Authors.Clear();
-            var authorIds = vm.AuthorIds ?? new List<Guid>();
+            var authorIds = vm.AuthorIds;
             if (authorIds.Any())
             {
                 var selectedAuthors = await _db.Authors.Where(a => authorIds.Contains(a.Id)).ToListAsync();
